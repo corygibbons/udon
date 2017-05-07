@@ -1,24 +1,27 @@
 {
-    "name": "udon",
-    "version": "0.0.1",
-    "repository": {
-        "type": "git",
-        "url": "github.com/corygibbons/udon"
-    },
-    "author": "Cory Gibbons",
-    "bugs": {
-        "url": "https://github.com/corygibbons/udon/issues"
-    },
-    "devDependencies": {
-        "normalize.css": "^3.0.2",
-        "browser-sync": "^2.9.3",
-        "gulp": "^3.9.0",
-        "gulp-autoprefixer": "0.0.8",
-        "gulp-concat": "^2.3.4",
-        "gulp-jshint": "^1.8.4",
-        "gulp-notify": "^1.4.0",
-        "gulp-rename": "^1.2.0",
-        "gulp-stylus": "^2.0.7",
-        "gulp-uglify": "^0.3.1"
-    }
+  "name": "udon",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "github.com/corygibbons/udon"
+  },
+  "author": "Cory Gibbons",
+  "bugs": {
+    "url": "https://github.com/corygibbons/udon/issues"
+  },
+  "scripts": {
+    "start": "npm-run-all --parallel browsersync postcss",
+    "browsersync": "browser-sync start --proxy your.url --files *.css",
+    "postcss": "postcss src/css/index.css -o style.css -w"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "cssnano": "^3.10.0",
+    "normalize.css": "^7.0.0",
+    "npm-run-all": "^4.0.2",
+    "postcss": "^6.0.1",
+    "postcss-cli": "^3.2.0",
+    "postcss-cssnext": "^2.10.0",
+    "postcss-easy-import": "^2.0.0"
+  }
 }
